@@ -1,0 +1,794 @@
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+}
+
+.top-bar {
+    background-color: navy;
+    color: white;
+    padding: 10px;
+    text-align: center;
+    /* display: flex; */
+    justify-content: space-between;
+    align-items: center;
+}
+
+.admissions-info p {
+    color: red;
+    margin-left: 20px;
+}
+
+.admission-btn {
+    background-color: green;
+    color: white;
+    border: none;
+    padding: 8px 15px;
+    margin: 0 10px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.navbar {
+    background-color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 50px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.logo img {
+    height: 50px;
+    margin-right: 10px;
+}
+
+.logo p {
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 30px;
+}
+
+.nav-links li {
+    display: inline-block;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: black;
+    font-weight: bold;
+    padding: 10px;
+}
+
+.nav-links a:hover {
+    text-decoration: none;
+    border-bottom: 2px solid green;
+}
+
+.image-section {
+    margin-top: 20px;
+}
+
+.image-section img {
+    width: 100%;
+    height: auto;
+}
+
+.extra-nav {
+    background-color: #003366;
+    padding: 10px;
+    text-align: center;
+}
+
+.extra-nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: right;
+    gap: 20px;
+}
+
+.extra-nav ul li {
+    display: inline-block;
+}
+
+.extra-nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 16px;
+}
+
+.extra-nav ul li a:hover {
+text-decoration: underline;
+}
+
+/* Existing CSS */
+/* (Your original CSS code goes here) */
+
+/* ===========================
+   Responsive Enhancements
+   =========================== */
+
+/* General Responsive Settings */
+@media (max-width: 1200px) {
+    /* Adjust padding for navbar */
+    .navbar {
+        padding: 20px 30px;
+    }
+
+    /* Reduce gap between nav links */
+    .nav-links {
+        gap: 20px;
+    }
+
+    /* Adjust admission buttons */
+    .admission-btn {
+        padding: 7px 12px;
+        margin: 0 8px;
+    }
+}
+
+@media (max-width: 992px) {
+    /* Stack .top-bar content vertically */
+    .top-bar {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .admissions-info {
+        margin-bottom: 10px;
+    }
+
+    /* Adjust navbar padding */
+    .navbar {
+        padding: 15px 20px;
+    }
+
+    /* Adjust logo size */
+    .logo img {
+        height: 40px;
+    }
+
+    .logo p {
+        font-size: 16px;
+    }
+
+    /* Adjust nav-links */
+    .nav-links {
+        gap: 15px;
+    }
+
+    /* Adjust extra-nav padding */
+    .extra-nav {
+        padding: 8px;
+    }
+
+    .extra-nav ul {
+        gap: 15px;
+    }
+
+    .extra-nav ul li a {
+        font-size: 14px;
+    }
+}
+
+@media (max-width: 768px) {
+    /* Modify .top-bar to use flex layout */
+    .top-bar {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .admissions-info {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .admissions-info p {
+        margin: 10px 0;
+    }
+
+    .admission-btn {
+        margin: 5px 0;
+        width: 80%;
+    }
+
+    /* Navbar adjustments */
+    .navbar {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    /* Hide the text logo and show only the image logo on smaller screens */
+    .logo p {
+        display: none;
+    }
+
+    /* Stack nav-links vertically */
+    .nav-links {
+        flex-direction: column;
+        align-items: center;
+        gap: 10px;
+    }
+
+    /* Adjust extra-nav for smaller screens */
+    .extra-nav ul {
+        flex-direction: column;
+        align-items: center;
+        gap: 10px;
+    }
+}
+
+@media (max-width: 576px) {
+    /* Further adjustments for very small screens */
+
+    /* Reduce padding in navbar */
+    .navbar {
+        padding: 10px 15px;
+    }
+
+    /* Adjust logo image size */
+    .logo img {
+        height: 35px;
+    }
+
+    /* Admission buttons take full width */
+    .admission-btn {
+        width: 100%;
+        margin: 5px 0;
+    }
+
+    /* Nav-links full width */
+    .nav-links {
+        width: 100%;
+    }
+
+    .nav-links a {
+        display: block;
+        width: 100%;
+        padding: 10px 0;
+    }
+
+    /* Extra-nav adjustments */
+    .extra-nav ul {
+        gap: 8px;
+    }
+
+    .extra-nav ul li a {
+        font-size: 14px;
+    }
+}
+
+/* Image Section  */
+/* Slideshow Styles */
+.slideshow-container {
+    max-width: 100%;
+    position: relative;
+    margin: auto;
+}
+
+.slides img {
+    width: 100%;
+    height: auto;
+    vertical-align: middle;
+ 
+}
+
+/* Dots/Indicators */
+.dots {
+    text-align: center;
+    padding: 10px;
+    background-color: #333;
+}
+
+.dot {
+    height: 15px;
+    width: 15px;
+    margin: 0 2px;
+    background-color: #bbb;
+    border-radius: 50%;
+    display: inline-block;
+    transition: background-color 0.6s ease;
+}
+
+.active {
+    background-color: #717171;
+}
+
+/* Fade Animation */
+.fade {
+    animation: fadeEffect 1.5s ease;
+}
+
+@keyframes fadeEffect {
+    from { opacity: 0.4; } 
+    to { opacity: 1; }
+}
+
+h2, h3 {
+    margin: 0;
+    text-align: center;
+    color: white;
+}
+
+p {
+    margin: 0;
+    text-align: center;
+}
+
+/* Icon Grid Section */
+.icon-grid {
+    display: flex;
+    justify-content: space-around;
+    background-color: #f4f4f4;
+    padding: 20px 0;
+}
+
+.icon-item {
+    text-align: center;
+}
+
+.icon-item img {
+    width: 50px;
+    height: 50px;
+    display: block;
+    margin: 0 auto;
+}
+
+.icon-item p {
+    margin-top: 10px;
+    font-size: 16px;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+    .icon-grid {
+        justify-content: center; /* Center icons on smaller screens */
+        gap: 20px; /* Add gap for spacing */
+    }
+
+    .icon-item img {
+        width: 40px;
+        height: 40px; /* Slightly smaller icons on mobile */
+    }
+
+    .icon-item p {
+        font-size: 14px; /* Smaller font for captions */
+    }
+}
+
+@media (max-width: 576px) {
+    .icon-grid {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr); /* 2 icons per row on very small screens */
+        gap: 10px;
+        padding: 10px 0;
+    }
+
+    .icon-item {
+        margin: 5px;
+    }
+
+    .icon-item img {
+        width: 35px;
+        height: 35px; /* Smaller icons for very small screens */
+    }
+
+    .icon-item p {
+        font-size: 12px; /* Reduce font size further for very small screens */
+    }
+}
+
+/* Vision Section */
+.vision-section {
+    background-color: #1a2c48;
+    color: white;
+    padding: 40px 0;
+}
+
+.vision-section p {
+    font-size: 18px;
+    margin-top: 10px;
+}
+
+.mission-core {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 20px;
+}
+
+.mission-core h3 {
+    font-size: 20px;
+}
+
+section {
+    padding: 50px 0;
+    text-align: center;
+}
+
+.president-section, .college-section {
+    background-color: #f9f9f9;
+}
+
+.president-section .content, .college-section .content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: auto;
+    padding: 20px;
+}
+
+.president-section .content {
+    flex-direction: row;
+}
+
+.college-section .content.reverse {
+    flex-direction: row-reverse;
+}
+
+.image-container {
+    flex: 1;
+}
+
+.president-section img, .college-section img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.text {
+    flex: 1;
+    padding: 0 20px;
+    text-align: left;
+}
+
+.text p{
+    text-align: justify;
+}
+
+.president-section h1, .college-section h2 {
+    color: #43a047;
+    font-size: 28px;
+}
+
+.president-section h2, .college-section h2 {
+    color: #ff6600;
+    margin-bottom: 10px;
+}
+
+.president-section p, .college-section p {
+    font-size: 16px;
+    line-height: 1.6;
+    margin: 20px 0;
+}
+
+a {
+    color: #43a047;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+.footer-section {
+    background-color: #12243b;
+    color: white;
+    padding: 50px 0;
+}
+
+.footer-grid {
+    display: flex;
+    justify-content: space-around;
+    max-width: 1200px;
+    margin: auto;
+}
+
+.footer-item {
+    max-width: 250px;
+    /* text-align: left; */
+}
+
+.footer-item h3 {
+    color: #43a047;
+    margin-bottom: 10px;
+}
+
+.footer-item p {
+    font-size: 14px;
+    line-height: 1.5;
+    text-align: justify;
+}
+
+.footer-item a {
+    color: #43a047;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.footer-item a:hover {
+    text-decoration: underline;
+}
+/* Media Queries for Responsiveness */
+@media screen and (max-width: 768px) {
+    .president-section .content, .college-section .content {
+        flex-direction: column; /* Stack sections on smaller screens */
+        text-align: center;
+    }
+
+    .text {
+        padding: 0 10px;
+    }
+
+    .footer-grid {
+        flex-direction: column; /* Stack footer items on smaller screens */
+        align-items: center;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .president-section h1, .college-section h2 {
+        font-size: 1.5em; /* Adjust font sizes for very small screens */
+    }
+
+    .president-section p, .college-section p {
+        font-size: 0.9em;
+    }
+
+    .footer-item p {
+        font-size: 0.8em;
+    }
+}
+
+
+.top-section {
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    padding: 40px;
+    background-color: #fff;
+    text-align: justify;
+}
+
+.image-container {
+    flex: 1;
+    padding-right: 20px;
+    padding-left: 15%;
+
+}
+
+.image-container img {
+    width: 100%;
+    height: auto;
+    max-width: 850px;
+    border-radius: 10px;
+    padding-top: 50px;
+
+}
+
+.text-container {
+    flex: 2;
+    padding-left: 20px;
+}
+
+.text-container h2 {
+    font-size: 28px;
+    margin-bottom: 20px;
+}
+
+.text-container ul {
+    list-style: none;
+    padding: 0;
+}
+
+.text-container ul li {
+    font-size: 16px;
+    margin-bottom: 10px;
+    position: relative;
+    padding-left: 20px;
+}
+
+.text-container ul li::before {
+    content: '•';
+    font-size: 20px;
+    position: absolute;
+    left: 0;
+    top: 0;
+    color: #007bff;
+}
+/* Media Queries for Responsiveness */
+@media screen and (max-width: 1024px) {
+    .image-container {
+        padding-left: 10%; /* Reduce padding for medium-sized screens */
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .top-section {
+        flex-direction: column; /* Stack image and text vertically */
+        padding: 20px; /* Reduce overall padding on smaller screens */
+    }
+
+    .image-container {
+        padding-right: 0;
+        padding-left: 0;
+        padding-bottom: 20px; /* Add some space below the image */
+    }
+
+    .text-container {
+        padding-left: 0; /* Remove left padding on smaller screens */
+    }
+
+    .text-container h2 {
+        font-size: 24px; /* Adjust font size for smaller screens */
+    }
+
+    .text-container ul li {
+        font-size: 14px; /* Adjust font size for smaller screens */
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .image-container img {
+        padding-top: 20px; /* Reduce top padding for very small screens */
+    }
+
+    .text-container h2 {
+        font-size: 20px; /* Further reduce font size */
+    }
+
+    .text-container ul li {
+        font-size: 12px; /* Further reduce font size */
+    }
+}
+
+.bottom-section {
+    display: flex;
+    justify-content: space-around;
+    padding: 40px;
+    background-color: #e9ecef;
+}
+
+.program-card {
+    background-color: #001f3f;
+    color: white;
+    padding: 20px;
+    margin: 10px;
+    text-align: center;
+    border-radius: 10px;
+    width: 30%;
+}
+
+.program-card h3 {
+    font-size: 22px;
+    margin-bottom: 15px;
+}
+
+.program-card p {
+    font-size: 16px;
+    line-height: 1.6;
+}
+
+@media (max-width: 768px) {
+    .top-section {
+        flex-direction: column;
+        padding: 20px;
+    }
+
+    .bottom-section {
+        flex-direction: column;
+        padding: 20px;
+    }
+
+    .program-card {
+        width: 100%;
+        margin-bottom: 20px;
+    }
+}
+footer {
+    background-color: #1c1c1c;
+    color: white;
+    /* padding: 40px 0; */
+    padding-top: 15px;
+}
+.footer-con{
+    display: flex;
+    justify-content: space-around;
+    padding: 0 50px;
+    flex-wrap: wrap;
+}
+
+.footer-sec {
+    width: 22%;
+}
+
+.footer-sec h3 {
+    color: #fff;
+    margin-bottom: 15px;
+    font-size: 18px;
+    border-bottom: 2px solid #3ab54a;
+    padding-bottom: 10px;
+}
+
+.footer-sec p {
+    color: #cccccc;
+    margin-bottom: 10px;
+}
+
+.footer-sec ul {
+    list-style: none;
+    padding-left: 0;
+}
+
+.footer-sec ul li {
+    margin-bottom: 10px;
+}
+
+.footer-sec ul li a {
+    text-decoration: none;
+    color: #cccccc;
+    font-size: 14px;
+    transition: color 0.3s ease;
+}
+
+.footer-sec ul li a:hover {
+    color: #3ab54a;
+}
+
+.footer-bot {
+    background-color: #151515;
+    padding: 15px 0;
+    text-align: center;
+    font-size: 14px;
+    color: #666666;
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 50px;
+}
+
+.footer-bot p {
+    margin: 0;
+}
+
+.social-icons a {
+    margin: 0 10px;
+    color: #fff;
+    font-size: 20px;
+    transition: color 0.3s ease;
+}
+
+.social-icons a:hover {
+    color: #3ab54a;
+}
+
+@media (max-width: 768px) {
+    .footer-con {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .footer-sec {
+        width: 100%;
+        margin-bottom: 20px;
+    }
+
+    .footer-bot{
+        flex-direction: column;
+    }
+}
